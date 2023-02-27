@@ -16,7 +16,7 @@ export default class App extends Component {
         this.setState({value: `${eval(this.state.value)}`})
       }
       else if (operator === "-" || operator === "+" || operator === "*" || operator === "/"){
-        this.state.value.includes(operator) ? this.setState({value:`${eval(this.state.value)}`}) : this.setState({value:this.state.value.concat(operator)})
+        this.state.value.includes("-") || this.state.value.includes("+") || this.state.value.includes("*") || this.state.value.includes("/") ? this.setState({value:`${eval(this.state.value)}`.concat(operator)})  : this.setState({value:this.state.value.concat(operator)})
       }
       
   }
